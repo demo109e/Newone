@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: file-host-bot
+    env: docker
+    plan: free
+    autoDeploy: true
+    region: oregon
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
